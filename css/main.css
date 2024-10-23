@@ -173,6 +173,26 @@ header .container {
 }
 /* ----------------  header styles ends ----------------  */
 
+
+/* ---------------- main styles starts ---------------- */
+/* brand section starts */
+#brands {
+  display:none;
+  padding-top:2rem;
+  padding-bottom:2rem;
+}
+.brand-box {
+  border: 1px solid var(--color-gray-300);
+  border-radius: 8px;
+  height:100px;
+  width:196px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ----------------  main styles ends ----------------  */
+
+
 /* ---------------- footer styles starts ---------------- */
 footer {
   font-size: 14px;
@@ -206,6 +226,20 @@ footer {
   header .container {
     gap:2rem;
   }
+  #brands {
+    display:block;
+
+    .container {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      gap:1rem;
+    }
+  }
+  #brand-5, #brand-6 {
+    display:none;
+    
+  }
   footer {
     .credit {
       display: block;
@@ -228,6 +262,11 @@ footer {
   }
   .btn-mobile {
     display:none;
+  }
+  #brand-5, #brand-6 {
+    display:flex;
+    
+    
   }
   
 }
