@@ -36,7 +36,11 @@ body {
   font-style: normal;
   font-size: 16px;
 }
-
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height:100vh;
+}
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -55,7 +59,7 @@ a:hover {
 }
 /* Global styles ends */
 
-/* header styles starts */
+/* ---------------- header styles starts ---------------- */
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -167,7 +171,29 @@ header .container {
   padding-top:1.5rem;
   padding-bottom:1.5rem;
 }
-/* header styles ends */
+/* ----------------  header styles ends ----------------  */
+
+/* ---------------- footer styles starts ---------------- */
+footer {
+  font-size: 14px;
+  color: var(--color-gray-600);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+  }
+  .copyright {
+
+  }
+  .credit {
+    display: none;
+  }
+}
+/* ----------------  footer styles ends ---------------- */
+
 
 /* media queries for desktop devices*/
 @media screen and (min-width: 768px) {
@@ -179,6 +205,11 @@ header .container {
   }
   header .container {
     gap:2rem;
+  }
+  footer {
+    .credit {
+      display: block;
+    }
   }
 }
 @media screen and (min-width: 1400px) {
