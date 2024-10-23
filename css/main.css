@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+/* color variables */
+:root {
+  --color-primary: #6366f1;
+  --color-dark: #0B0F19;
+  --color-gray: #9397ad;
+  --color-white: #F1F4FD;
+  --color-error: #EF4444;
+  --color-warning: #FFBA08;
+  --color-success: #22C55E;
+  --color-gray-800:#33354D;
+  --color-gray-700:#565973;
+  --color-gray-600:#9397AD;
+  --color-gray-500:#B4B7C9;
+  --color-gray-400:#D4D7E5;
+  --color-gray-300:#E2E5F1;
+  --color-gray-200:#EFF2FC;
+  --color-gray-100:#F3F6FF;
+  --color-info:#4C82F7
+  --transition-time: all 0.2s ease-in;
+}
+/* Global styles start */
+* {
+  box-sizing: border-box;
+  -webkit-top-highlight-color: rgba(0,0,0,0);
+}
+body, section, div, header, footer, main, aside, nav, blackquote, p, span, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+
+.container {
+  width: 100%;
+  padding-left:15px;
+  padding-right:15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Global styles ends */
