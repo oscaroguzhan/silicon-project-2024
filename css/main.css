@@ -42,6 +42,8 @@ nav,
 blackquote,
 p,
 span,
+ul,
+li,
 h1,
 h2,
 h3,
@@ -70,7 +72,6 @@ main {
     "hero"
     "features"
     "slider"
-    "features-transaction"
     "footer";
 
   @media screen and (min-width: 768px) {
@@ -79,7 +80,16 @@ main {
       "brands"
       "features"
       "slider"
+      "footer";
+  }
+  @media screen and (min-width: 1400px) {
+    grid-template-areas:
+      "hero"
+      "brands"
+      "features"
+      "slider"
       "features-transaction"
+      "testimonials"
       "footer";
   }
 }
@@ -712,6 +722,65 @@ header .container {
 }
 /* features-transaction section ends */
 
+
+#testimonials {
+  grid-area: testimonials;
+  margin-top:2rem;
+  margin-bottom: 2rem;
+  background:var(--color-gray-200);
+  
+  display: none;
+  @media screen and (min-width: 1400px) {
+    display: block;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    @media screen and (min-width: 768px) {
+      max-width: 720px;
+    }
+    @media screen and (min-width: 1400px) {
+      max-width: 1320px;
+    }
+    .heading {
+      font-size:var(--heading-h1);
+      font-weight: 700;
+    }
+  }
+
+  .testimonial-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height:350px;
+    border-radius:0.5rem;
+    gap: 2rem;
+    background-color: #fff;
+    padding:2rem;
+    margin-bottom: 2rem;
+    margin-top:2rem;
+
+    .quotes {
+      position:absolute;
+      top:10px;
+      left: 180;
+    }
+    .rating-img {
+      width: 88px;
+      height: auto;
+    }
+    .author {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      
+    }
+  }
+}
 /* ----------------  main styles ends ----------------  */
 
 /* ---------------- footer styles starts ---------------- */
