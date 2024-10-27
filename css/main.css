@@ -70,6 +70,7 @@ main {
     "hero"
     "features"
     "slider"
+    "features-transaction"
     "footer";
 
   @media screen and (min-width: 768px) {
@@ -78,6 +79,7 @@ main {
       "brands"
       "features"
       "slider"
+      "features-transaction"
       "footer";
   }
 }
@@ -96,6 +98,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Global styles ends */
 
 /* ---------------- header styles starts ---------------- */
@@ -481,7 +484,6 @@ header .container {
     @media screen and (min-width: 1400px) {
       flex-direction: row;
       max-width: 1320px;
-      
     }
   }
   .headline {
@@ -555,10 +557,16 @@ header .container {
 
 /* slider section starts  */
 #slider {
-  margin-top:2rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   grid-area: slider;
-  
+  background: rgb(99, 102, 241);
+  background: linear-gradient(
+    0deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(218, 70, 239, 0.05) 42%,
+    rgba(241, 244, 253, 0.07) 83%
+  );
+
   .container {
     display: flex;
     flex-direction: column;
@@ -573,7 +581,6 @@ header .container {
     @media screen and (min-width: 1400px) {
       max-width: 1320px;
     }
-
   }
   .heading h2 {
     font-size: var(--heading-h3);
@@ -584,26 +591,27 @@ header .container {
     @media screen and (min-width: 1400px) {
       font-size: var(--heading-h1);
     }
-
   }
   #images {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 3rem;
-    #image1, #image2 {
-      display:none;
+    #image1,
+    #image2 {
+      display: none;
     }
     @media screen and (min-width: 768px) {
       justify-content: center;
-      #image1, #image2 {
-        display:block;
+      #image1,
+      #image2 {
+        display: block;
       }
       gap: 1rem;
     }
     @media screen and (min-width: 1400px) {
       justify-content: space-between;
-      gap:5rem;
+      gap: 5rem;
     }
   }
   .content {
@@ -611,20 +619,98 @@ header .container {
       font-size: var(--heading-h4);
       text-align: center;
       margin-bottom: 1rem;
-      
+
       @media screen and (min-width: 768px) {
-        
         font-size: var(--heading-h3);
       }
     }
     p {
       text-align: center;
+      margin-bottom: 2rem;
     }
   }
-
-
 }
 /* slider section ends */
+
+/* features-transaction section starts */
+#features-transaction {
+  grid-area: features-transaction;
+  display:none;
+  @media screen and (min-width: 1400px) {
+    display:block;
+  }
+  .container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+      max-width: 720px;
+    }
+    @media screen and (min-width: 1400px) {
+      max-width: 1320px;
+    }
+  }
+  .content-up {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h2 {
+      font-size: var(--heading-h2);
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      list-style: none;
+      margin-bottom: 1rem;
+
+      li {
+        display: flex;
+        gap: 0.5rem;
+      }
+    }
+    button {
+      width: 159px;
+    }
+  }
+  .content-down {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h2 {
+      font-size: var(--heading-h2);
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    button {
+      width: 159px;
+    }
+    .text-wrapper {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      .content-image {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        background: rgb(99, 102, 241);
+        background: linear-gradient(
+          180deg,
+          rgba(99, 102, 241, 0.1) 0%,
+          rgba(57, 59, 139, 0.08) 100%
+        );
+        border-radius: 10px;
+        padding: 1rem;
+      }
+    }
+  }
+}
+/* features-transaction section ends */
 
 /* ----------------  main styles ends ----------------  */
 
