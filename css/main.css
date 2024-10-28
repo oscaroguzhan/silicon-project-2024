@@ -76,7 +76,8 @@ main {
     "hero"
     "features"
     "slider"
-    "faqs";
+    "faqs"
+    "newsletter";
 
   @media screen and (min-width: 768px) {
     grid-template-areas:
@@ -84,7 +85,8 @@ main {
       "brands"
       "features"
       "slider"
-      "faqs";
+      "faqs"
+      "newsletter";
   }
   @media screen and (min-width: 1400px) {
     grid-template-areas:
@@ -94,7 +96,8 @@ main {
       "slider"
       "features-transaction"
       "testimonials"
-      "faqs";
+      "faqs"
+      "newsletter";
   }
 }
 a {
@@ -793,6 +796,7 @@ header .container {
 }
 /* testimonials section ends */
 
+/* faqs section starts */
 #faqs {
   grid-area: faqs;
   margin-top: 2rem;
@@ -816,15 +820,15 @@ header .container {
     }
     .contact-container {
       display:none;
-
       @media screen and (min-width: 768px) {
         display:flex;
-        gap: 2rem;
-        order: 3
+        justify-content: space-around;
+        gap:1rem;
       }
       @media screen and (min-width: 1400px) {
         display: flex;
-        gap: 2rem;
+        justify-content: center;
+        gap: 3rem;
       }
     }
     .contact-wrapper {
@@ -845,7 +849,7 @@ header .container {
       display: flex;
       gap: 1rem;
       flex-direction: column;
-      oder: 2;
+      
       .question-wrapper {
         border: 1px solid var(--color-gray-300);
         border-radius: 0.5rem;
@@ -854,6 +858,7 @@ header .container {
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
+
         i {
           border: 1px solid var(--color-gray-200);
           border-radius: 50%;
@@ -891,13 +896,111 @@ header .container {
       
     }
   }
-  @media screen and (min-width: 1400px) {
-    
-  }
-}
-@media screen and (min-width: 1400px) {
 }
 
+/* faqs section ends */
+
+
+#newsletter {
+  grid-area: newsletter;
+  margin-bottom: 2rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    background: rgb(99, 102, 241);
+  background: linear-gradient(
+    0deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(218, 70, 239, 0.05) 42%,
+    rgba(241, 244, 253, 0.07) 83%
+  );
+    border-radius: 0.5rem;
+    padding: 2rem;
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      h2 {
+        font-size: var(--heading-h3);
+        @media screen and (min-width: 1400px) {
+          font-size: var(--heading-h2);
+        }
+      }
+    }
+    h4 {
+      font-size: var(--heading-h6);
+
+      @media screen and (min-width: 768px) {
+        font-size: var(--heading-h5);
+      }
+      @media screen and (min-width: 1400px) {
+        font-size: var(--heading-h4);
+      }
+    }
+    h4 span {
+      display: none;
+      @media screen and (min-width: 1400px) {
+        display: inline;
+      }
+    }
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      
+      
+      .input {
+        display: flex;
+        align-items: center;
+        width: 300px !important;
+        gap: 0.5rem;
+        border: 1px solid var(--color-gray-300);
+        background-color: #fff;
+        border-radius: 0.5rem 0 0 0.5rem;
+        
+        padding: 1rem;
+        input {
+          border: none;
+          outline: none;
+          width: 100%;
+          color: var(--color-gray-500);
+        }
+        i {
+          color: var(--color-gray-500);
+          
+        }
+    
+
+      }
+      .btn-primary {
+        border-radius: 0 0.5rem 0.5rem 0;
+        height: 52px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 1rem;
+      .input {
+        width: 200px !important;
+      }
+    }
+    @media screen and (min-width: 1400px) {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 2rem;
+    }
+  }
+  
+}
 /* ----------------  main styles ends ----------------  */
 
 /* ---------------- footer styles starts ---------------- */
@@ -921,6 +1024,7 @@ footer {
     }
     @media screen and (min-width: 1400px) {
       max-width: 1320px;
+
     }
   }
 }
